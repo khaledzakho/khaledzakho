@@ -1,0 +1,1965 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>khaled.bash</title>
+
+<style>
+        @font-face {
+        font-family: 'rabarr';
+        src: url('rabar.woff');
+        }
+        * {
+            font-family: 'rabarr';
+            direction :rtl;
+        }
+        .as {
+            background-color: #d5d5d5;
+            color: rgb(32, 19, 21);
+            text-align: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: bold;
+            padding: 15px;
+            text-shadow: 1px 1px rgb(209, 3, 3);
+            border-radius: 150px;
+        }
+        .to {
+            background-color: #d5d5d5;
+            color: rgb(35, 21, 23);
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 2px 2px rgb(3, 209, 17);
+            justify-content: center;
+            font-size: 33px;
+            margin: 30px;
+            padding: 30px;
+            border-radius: 150px;
+        }
+        .navbar {
+            width: 100%;
+            position: fixed;
+            margin-bottom:50px;
+            border-radius:0;
+        }
+        .jumbotron {
+            margin-bottom:0;
+        }
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+        .panel-body {
+            padding: 0;
+        }
+        .panel {
+            border-radius:12px!important;
+        }
+        .panel-heading {
+            border-top-left-radius:12px !important;
+            border-top-right-radius:12px !important;
+            text-align: center;
+        }
+        .panel-footer {
+            border-bottom-left-radius:12px !important;
+            border-bottom-right-radius:12px !important;
+            font-size :23px;
+            text-align: center;
+            font-weight:bold;
+        }
+        .xshta20 {
+            background-image: linear-gradient(rgb(252, 252, 33), rgb(22, 249, 22));
+            text-align: center;
+            font-size: 35px;
+            justify-content: center;
+            justify-items: auto;
+        }
+        .xshta4 {
+            font-size: 20px;
+            text-align: center;
+            justify-content: center;
+            justify-items: auto;
+        }
+        .xshta5 {
+            font-size: 20px;
+            text-align: center;
+            justify-content: center;
+            justify-items: auto;
+        }
+        .xshta3 {
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        .xshta2 {
+            color: black;
+            font-size: 20px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        .xshta1 {
+            background-image: linear-gradient(rgb(252, 33, 33), rgb(250, 26, 254));
+            text-align: center;
+            font-size: 25px;
+            justify-content: center;
+            justify-items: auto;
+        }
+        .navimg {
+            border-radius:50px;
+            margin: -14px;
+        }
+        table, th, td {
+            border: 4px double rgb(191, 65, 40);
+        }
+        th:nth-child(even) {
+            background-color: silver;
+        }
+        th:nth-child(odd) {
+            background-color: silver;
+        }
+        .xshta3:nth-child(even) {
+            background-color: rgb(194, 237, 241);
+        }
+        .xshta3:nth-child(odd) {
+            background-color: rgb(194, 237, 241);
+        }
+        .xshta20:nth-child(even) {
+            background-color: rgb(171, 131, 250);
+        }
+        .xshta20:nth-child(odd) {
+            background-color: rgb(171, 131, 250);
+        }
+        .xshta4:nth-child(even) {
+            background-color: rgb(212, 196, 176);
+        }
+        .xshta4:nth-child(odd) {
+            background-color: rgb(212, 196, 176);
+        }
+        .xshta5:nth-child(even) {
+            background-color: rgb(184, 178, 177);
+        }
+        .xshta5:nth-child(odd) {
+            background-color: rgb(184, 178, 177);
+        }
+        .xshta6:nth-child(even) {
+            background-color: rgb(176, 196, 227);
+        }
+        .xshta6:nth-child(odd) {
+            background-color: rgb(176, 196, 227);
+        }
+        .xshta7:nth-child(even) {
+            background-color: rgb(161, 177, 219);
+        }
+        .xshta7:nth-child(odd) {
+            background-color: rgb(161, 177, 219);
+        }
+        .xshta8:nth-child(even) {
+            background-color: rgb(214, 211, 164);
+        }
+        .xshta8:nth-child(odd) {
+            background-color: rgb(214, 211, 164);
+        }
+        .xshta8:nth-child(even) {
+            background-color: rgb(232, 156, 156);
+        }
+        .xshta8:nth-child(odd) {
+            background-color: rgb(232, 156, 156);
+        }
+        .xshta9:nth-child(even) {
+            background-color: rgb(215, 172, 219);
+        }
+        .xshta9:nth-child(odd) {
+            background-color: rgb(215, 172, 219);
+        }
+        .xshta12:nth-child(even) {
+            background-color: rgb(84, 151, 215);
+        }
+        .xshta12:nth-child(odd) {
+            background-color: rgb(84, 151, 215);
+        }
+        .xshta13:nth-child(even) {
+            background-color: rgb(135, 217, 233);
+        }
+        .xshta13:nth-child(odd) {
+            background-color: rgb(135, 217, 233);
+        }
+        .xshta14:nth-child(even) {
+            background-color: rgb(135, 219, 120);
+        }
+        .xshta14:nth-child(odd) {
+            background-color: rgb(135, 219, 120);
+        }
+        .xshta15:nth-child(even) {
+            background-color: rgb(205, 219, 111);
+        }
+        .xshta15:nth-child(odd) {
+            background-color: rgb(205, 219, 111);
+        }
+        .xshta16:nth-child(even) {
+            background-color: rgb(155, 179, 151);
+        }
+        .xshta16:nth-child(odd) {
+            background-color: rgb(155, 179, 151);
+        }
+        .xshta17:nth-child(even) {
+            background-color: rgb(227, 134, 170);
+        }
+        .xshta17:nth-child(odd) {
+            background-color: rgb(227, 134, 170);
+        }
+        th, td {
+            font-weight: bold;
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./index-bash.html">
+                <img class="navimg" width="30" src="aa.jpg">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li ><a href="./index.html">دەستپێک</a></li>
+                <li class = "active"><a href="./index-bash.html"> بەش و کۆنمرە </a></li>
+                <li><a href="./index-darbarimn.html"> دەربارە </a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+</nav>
+<br><br>
+
+<div class="as">
+<p> بخێرهاتی 😍</p></div>
+<div class="to">
+<p> کێمترین کۆنمرەیێ وەرگرتی ل زانکۆیا زاخۆ ل ساڵا (2021-2022)<br><br>👇👇👇</p>
+</div>
+
+<table border="1" width="300" height="300" class="xshta2">
+    
+    <tr  class="xshta20">
+        <th  colspan="5" class="xshta20"> کێمترین کۆنمرەیێ وەرگرتی ل زانکۆیا زاخۆ   (2021-2022)</th>
+    </tr>
+         <tr class="xshta1">
+        <th class="xshta1"> کۆلیژ/فاکەلتی </th>
+        <th class="xshta1"> پشک </th>
+        <th class="xshta1"> زانکۆلاین </th>
+        <th class="xshta1"> پارالێل </th>
+        <th class="xshta1"> ئێڤاران </th>
+        </tr>
+        <tr class="xshta4"> 
+        <td > کۆلیژا پزیشکی </td> 
+        <td class="xshta"> پزیشکی </td>
+        <td  class="xshta">99.000</td>
+        <td  class="xshta">98.400</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr  class="xshta3">
+        <td rowspan="3"  >کۆلیژا ئەندازیاری</td>
+        <td  class="xshta">ئەندازیاری شارستانی و ژینگەهـ</td>
+        <td  class="xshta">93.033</td>
+        <td  class="xshta">91.120</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta3">
+        <td  class="xshta">ئەندازیاری میکانیک</td>
+        <td  class="xshta">92.000</td>
+        <td  class="xshta">83.600</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr   class="xshta3">
+        <td  class="xshta">ئەندازیاری پترۆل (نەڤت)</td>
+        <td  class="xshta">94.113</td>
+        <td  class="xshta">92.153</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr    class="xshta5">
+        <td rowspan="5" > فاکەڵتیا زانست </td>
+        <td class="xshta"> زانستێ کومپیوتەر </td>
+        <td  class="xshta">83.100</td>
+        <td  class="xshta">78.808</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr   class="xshta5"> 
+        <td class="xshta">زیندەوەرزانی</td>
+        <td  class="xshta">90.600</td>
+        <td  class="xshta">87.800</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr  class="xshta5">
+        <td class="xshta">فیزیا</td>
+        <td  class="xshta">80.646</td>
+        <td  class="xshta">75.900</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr  class="xshta5">
+        <td class="xshta">ماتماتیک</td>
+        <td  class="xshta">77.363</td>
+        <td  class="xshta">71.000</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta5">
+        <td class="xshta">کیمیا</td>
+        <td  class="xshta">87.640</td>
+        <td  class="xshta">82.540</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr   class="xshta16">
+        <td rowspan="5"  >فاکەڵتیا زانستێن مرۆڤایەتی</td>
+        <td class="xshta">خواندنا ئسلامی</td>
+        <td  class="xshta">راستەوخۆ  60.000</td>
+        <td  class="xshta">راستەوخۆ  55.000</td>
+        <td  class="xshta">راستەوخۆ  55.000</td>
+        </tr>
+        <tr  class="xshta16">
+        <td class="xshta"> زمانێ ئینگلیزی </td>
+        <td  class="xshta">87.377</td>
+        <td  class="xshta">79.093</td>
+        <td  class="xshta">73.200</td>
+        </tr>
+        <tr   class="xshta16">
+        <td class="xshta">زمانێ عەرەبی</td>
+        <td  class="xshta">77.753</td>
+        <td  class="xshta">70.700</td>
+        <td  class="xshta">63.500</td>
+        </tr>
+        <tr   class="xshta16">
+        <td class="xshta"> زمانێ کوردی</td>
+        <td  class="xshta">72.400</td>
+        <td  class="xshta">68.317</td>
+        <td  class="xshta">64.200</td>
+        </tr>
+        <tr  class="xshta16">
+        <td class="xshta"> مێژوو</td>
+        <td  class="xshta">78.600</td>
+        <td  class="xshta">70.400</td>
+        <td  class="xshta">67.900</td>
+        </tr>
+        <tr class="xshta7" >
+        <td rowspan="4">فاکەڵتیا پەروەردە</td>
+        <td class="xshta"> پەروەردا لەشی و زانستێن وەرزشی</td>
+        <td  class="xshta">راستەوخۆ  60.000</td>
+        <td  class="xshta">راستەوخۆ  55.000</td>
+        <td  class="xshta">راستەوخۆ  55.000</td>
+        </tr>
+        <tr    class="xshta7">
+        <td class="xshta"> جوگرافیا </td>
+        <td  class="xshta">78.300</td>
+        <td  class="xshta">72.061</td>
+        <td   class="xshta">67.600</td>
+        </tr>
+        <tr   class="xshta7">
+        <td class="xshta"> دەرونناسی </td>
+        <td  class="xshta">72.400</td>
+        <td  class="xshta">66.600</td>
+        <td  class="xshta">66.000</td>
+        </tr>
+        <tr  class="xshta7">
+        <td class="xshta"> ماتماتیک </td>
+        <td  class="xshta">74.100</td>
+        <td  class="xshta">67.700</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr   class="xshta8">
+        <td rowspan="5"> کۆلیژا پەروەردا بنیات </td>
+        <td class="xshta"> زانستێ گشتی </td>
+        <td  class="xshta">74.720</td>
+        <td  class="xshta">69.625</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> زانستێ کۆمەلایەتی</td>
+        <td  class="xshta">73.000</td>
+        <td  class="xshta">67.900</td>
+        <td  class="xshta">64.900</td>
+        </tr>
+        <tr   class="xshta8">
+        <td class="xshta"> زمانێ ئینگلیزی </td>
+        <td  class="xshta">79.300</td>
+        <td  class="xshta">73.758</td>
+        <td  class="xshta">68.900</td>
+        </tr>
+        <tr    class="xshta8">
+        <td class="xshta">زمانێ عەرەبی</td>
+        <td  class="xshta">74.000</td>
+        <td  class="xshta">67.986</td>
+        <td  class="xshta">65.900</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> زمانێ کوردی</td>
+        <td  class="xshta">71.800</td>
+        <td  class="xshta">66.000</td>
+        <td  class="xshta">63.200</td>
+        </tr>
+        <tr   class="xshta9">
+        <td rowspan="3" > کۆلیژا کارگێری و ئابوری </td>
+        <td class="xshta"> زانستێ کارگێری </td>
+        <td  class="xshta">71.300</td>
+        <td  class="xshta">65.525</td>
+        <td  class="xshta">63.400</td>
+        </tr>
+        <tr   class="xshta9">
+        <td class="xshta"> زانستێ ئابوری</td>
+        <td  class="xshta">76.600</td>
+        <td  class="xshta">69.931</td>
+        <td  class="xshta">66.400</td>
+        </tr>
+        <tr   class="xshta9">
+        <td class="xshta"> زانستێ دارایی و بانکی </td>
+        <td  class="xshta">68.800</td>
+        <td  class="xshta">64.145</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+</tr>
+</table>
+<br>
+<div class="to">
+<p> کێمترین کۆنمرەیێ وەرگرتی ل زانکۆیا دهۆک ل ساڵا (2021-2022)<br><br>👇👇👇</p>
+</div>
+<table border="1" width="300" height="300" class="xshta2">
+    
+
+    <tr  class="xshta20">
+        <th colspan="5" class="xshta20"> کێمترین کۆنمرەیێ وەرگرتی ل زانکۆیا دهۆک   (2021-2022)</th>
+    </tr>
+    <tr class="xshta1">
+        <th class="xshta1"> کۆلیژ </th>
+        <th class="xshta1"> پشک </th>
+        <th class="xshta1"> زانکۆلاین </th>
+        <th class="xshta1">    پارالێل    </th>
+       </tr>
+        <tr class="xshta9"> 
+        <td rowspan="5">  پزیشکی </td> 
+        <td class="xshta9"> پزیشکی </td>
+        <td  class="xshta9">99.143</td>
+        <td  class="xshta9">98.400</td>
+        </tr>
+        <tr class="xshta16"> 
+        <td class="xshta16"> دەرمانسازی </td>
+        <td  class="xshta16">98.000</td>
+        <td  class="xshta16">97.600</td>
+        </tr>
+        <tr class="xshta13"> 
+        <td class="xshta13"> پزیشکیا ددانا </td>
+        <td  class="xshta13">98.286</td>
+        <td  class="xshta13">97.855</td>
+        </tr>
+        <tr class="xshta17"> 
+        <td class="xshta17"> پەرستاری </td>
+        <td  class="xshta17">96.000</td>
+        <td  class="xshta17">94.333</td>
+        </tr>
+        <tr class="xshta14"> 
+        <td class="xshta14"> پزیشکیا ڤێتێرنەری </td>
+        <td  class="xshta14">92.040</td>
+        <td  class="xshta14">88.000</td>
+        </tr>
+        <tr class="xshta12"> 
+        <td rowspan="2"> کۆلیژا زانستێن تەندروستی  </td> 
+        <td class="xshta12"> زانستێ سرکرن (پەنچ) </td>
+        <td  class="xshta12">96.667</td>
+        <td  class="xshta12">95.429</td>
+        </tr>
+        <tr class="xshta12"> 
+        <td class="xshta12"> زانستێ لابور پزیشکی </td>
+        <td  class="xshta12">96.079</td>
+        <td  class="xshta12">96.000</td>
+        </tr>
+        <tr class="xshta3">
+        <td rowspan="5"  >کۆلیژا ئەندازیاری</td>
+        <td  class="xshta"> شارستانی </td>
+        <td  class="xshta">95.100</td>
+        <td  class="xshta">93.720</td>
+        </tr>
+        <tr class="xshta3">
+        <td  class="xshta"> میکانیک</td>
+        <td  class="xshta">93.667</td>
+        <td  class="xshta">86.700</td>>
+        </tr>
+        <tr class="xshta3">
+        <td  class="xshta"> کارەبا و کومپیوتەر </td>
+        <td  class="xshta">93.600</td>
+        <td  class="xshta">91.8</td>
+        </tr>
+        <tr class="xshta3">
+        <td  class="xshta">  تەلارسازی </td>
+        <td  class="xshta">96.639</td>
+        <td  class="xshta">87.633</td>
+        </tr>
+        <tr class="xshta3">
+        <td  class="xshta"> بایۆمیدیکال <br><br>(بڕا ساڵانە4,000$) ئەڤ بەشە دوو باوەرنامە پێ دهێنە دان ژلایێ زانکۆیا دهۆک و زانکۆیا ئەلمانی </td>
+        <td  class="xshta">91.000</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta5">
+        <td rowspan="6" > کۆلیژا زانست </td>
+        <td class="xshta"> زانستێ کومپیوتەر </td>
+        <td  class="xshta">85.900</td>
+        <td  class="xshta">81.333</td>
+        </tr>
+        <tr class="xshta5"> 
+        <td class="xshta">زیندەوەرزانی</td>
+        <td  class="xshta">92.567</td>
+        <td  class="xshta">87.833</td>
+        </tr>
+        <tr class="xshta5">
+        <td class="xshta">عەردناسی</td>
+        <td  class="xshta">78.750</td>
+        <td  class="xshta">72.600</td>
+        </tr>
+        <tr class="xshta5">
+        <td class="xshta">فیزیا</td>
+        <td  class="xshta">84.100</td>
+        <td  class="xshta">78.009</td>
+        </tr>
+        <tr class="xshta5">
+        <td class="xshta">ماتماتیک</td>
+        <td  class="xshta">76.395</td>
+        <td  class="xshta">71.300</td>
+        </tr>
+        <tr class="xshta5">
+        <td class="xshta">کیمیا</td>
+        <td  class="xshta">88.733</td>
+        <td  class="xshta">84.100</td>
+        </tr>
+        <tr class="xshta12">
+        <td> کۆلیژا یاسا </td>
+        <td class="xshta"> یاسا </td>
+        <td  class="xshta">91.900</td>
+        <td  class="xshta">87.216</td>
+        </tr>
+        <tr class="xshta13">
+        <td rowspan="2" > کۆلیژا زانستێن سیاسی </td>
+        <td class="xshta13"> سیستەمێ سیاسی و سیاسەتا گشتی </td>
+        <td  class="xshta13">86.800</td>
+        <td  class="xshta13">86.800</td>
+        </tr>
+        <tr class="xshta13">
+        <td class="xshta13"> پەیوەندیێن نیڤدەولەتی و دیبلوماسی </td>
+        <td  class="xshta13">82.700</td>
+        <td  class="xshta13">82.700</td>
+        </tr>
+        <tr class="xshta14">
+        <td rowspan="3" > کۆلیژا زمان </td>
+        <td class="xshta14"> زمانێ ئینگلیزی </td>
+        <td  class="xshta14">89.900</td>
+        <td  class="xshta14">84.100</td>
+        </tr>
+        <tr class="xshta14">
+        <td class="xshta14"> زمانێ کوردی </td>
+        <td  class="xshta14">74.816</td>
+        <td  class="xshta14">68.400</td>
+        </tr>
+        <tr class="xshta14">
+        <td class="xshta14"> وەرگێران </td>
+        <td  class="xshta14">85.698</td>
+        <td  class="xshta14">80.200</td>
+        </tr>
+        <tr class="xshta6">
+        <td rowspan="9"  >کۆلیژا زانستێن مرۆڤایەتی</td>
+        <td class="xshta"> دراما </td>
+        <td  class="xshta">راستەوخۆ  60.000</td>
+        <td  class="xshta">راستەوخۆ  55.000</td>
+        </tr>
+        <tr class="xshta6">
+        <td class="xshta">شێوار  </td>
+        <td  class="xshta">72.100</td>
+        <td  class="xshta">68.500</td>
+        </tr>
+        <tr class="xshta6">
+        <td class="xshta"> جوگرافیا </td>
+        <td  class="xshta">74.500</td>
+        <td  class="xshta">68.400</td>
+        </tr>
+        <tr class="xshta6">
+        <td class="xshta"> خواندنا ئاشتی و مافێن مرۆڤی  </td>
+        <td  class="xshta">70.225</td>
+        <td  class="xshta">65.300</td>
+        </tr>
+        <tr class="xshta6">
+        <td class="xshta"> دەرونناسی  </td>
+        <td  class="xshta">78.309</td>
+        <td  class="xshta">71.910</td>
+        </tr>
+        <tr class="xshta6">
+        <td class="xshta"> شێوەکاری </td>
+        <td  class="xshta">راستەوخۆ  60.000</td>
+        <td  class="xshta">راستەوخۆ  55.000</td>
+        </tr>
+        <tr class="xshta6">
+        <td class="xshta"> کۆمەلناسی </td>
+        <td  class="xshta">71.040</td>
+        <td  class="xshta">66.800</td>
+        </tr>
+        <tr class="xshta6">
+        <td class="xshta"> مێژوو </td>
+        <td  class="xshta">77.900</td>
+        <td  class="xshta">71.600</td>
+        </tr>
+        <tr class="xshta6">
+        <td class="xshta"> پەروەردا ئاینێ </td>
+        <td  class="xshta">راستەوخۆ  60.000</td>
+        <td  class="xshta">راستەوخۆ  55.000</td>
+        </tr>
+        <tr class="xshta5" >
+        <td> کۆلیژا پلان دانانا جهی</td>
+        <td class="xshta5">  پلان دانانا جهی<br><br> (5 ساڵە ، بڕا ساڵانە3,000$) ئەڤ بەشە باوەرناما هەڤبەش پێ دهێتە دان ژلایێ زانکۆیا دهۆک و زانکۆیا ئەلمانی</td>
+        <td  class="xshta5">74.200</td>
+        <td  class="xshta5">- - - - -</td>
+        </tr>
+        <tr class="xshta12" >
+        <td rowspan="7">کۆلیژا پەروەردە - ئاکرێ</td>
+        <td class="xshta"> زمانێ ئینگلیزی </td>
+        <td  class="xshta">85.500</td>
+        <td  class="xshta">80.000</td>
+        </tr>
+        <tr  class="xshta12">
+        <td class="xshta"> زمانێ عەرەبی </td>
+        <td  class="xshta">80.400</td>
+        <td  class="xshta">72.748</td>
+        </tr>
+        <tr  class="xshta12">
+        <td class="xshta"> زمانێ کوردی </td>
+        <td  class="xshta">77.000</td>
+        <td  class="xshta">69.749</td>
+        </tr>
+        <tr  class="xshta12">
+        <td class="xshta"> زیندەوەرزانی </td>
+        <td  class="xshta">80.400</td>
+        <td  class="xshta">73.000</td>
+        </tr>
+        <tr  class="xshta12">
+        <td class="xshta"> ماتماتیک </td>
+        <td  class="xshta">74.000</td>
+        <td  class="xshta">67.784</td>
+        </tr>
+        <tr class="xshta12">
+        <td class="xshta"> مێژوو </td>
+        <td  class="xshta">78.800</td>
+        <td  class="xshta">71.800</td>
+        </tr>
+        <tr class="xshta12">
+        <td class="xshta"> پەروەردا ئاینی </td>
+        <td  class="xshta">راستەوخۆ  60.000</td>
+        <td  class="xshta">راستەوخۆ  55.000</td>
+        </tr>
+        <tr class="xshta8">
+        <td rowspan="9"> کۆلیژا پەروەردا بنەڕەتی </td>
+        <td class="xshta"> جوگرافیا </td>
+        <td  class="xshta">77.200</td>
+        <td  class="xshta">72.600</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> رابەریا پەروەردەیی </td>
+        <td  class="xshta">69.600</td>
+        <td  class="xshta">64.729</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> زانستەکان </td>
+        <td  class="xshta">77.200</td>
+        <td  class="xshta">71.760</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> زمانێ ئینگلیزی </td>
+        <td  class="xshta">82.200</td>
+        <td  class="xshta">76.541</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> زمانێ عەرەبی </td>
+        <td  class="xshta">79.100</td>
+        <td  class="xshta">73.227</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> زمانێ کوردی </td>
+        <td  class="xshta">73.500</td>
+        <td  class="xshta">68.000</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> ماتماتیک  </td>
+        <td  class="xshta">73.600</td>
+        <td  class="xshta">68.300</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> مێژوو </td>
+        <td  class="xshta">79.000</td>
+        <td  class="xshta">72.600</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> پەروەردا تایبەت </td>
+        <td  class="xshta">70.800</td>
+        <td  class="xshta">64.357</td>
+        </tr>
+        <tr class="xshta16">
+        <td rowspan="6" > کۆلیژا کارگێری و ئابوری </td>
+        <td class="xshta16"> زانستێ دارایی و بانکی </td>
+        <td  class="xshta16">68.395</td>
+        <td  class="xshta16">63.667</td>
+        </tr>
+        <tr class="xshta16">
+        <td class="xshta16"> ئامار </td>
+        <td  class="xshta16">66.500</td>
+        <td  class="xshta16">61.938</td>
+        </tr>
+        <tr class="xshta16">
+        <td class="xshta16"> ژمێریاری </td>
+        <td  class="xshta16">75.600</td>
+        <td  class="xshta16">67.800</td>
+        </tr>
+        <tr class="xshta16">
+        <td class="xshta16"> کارگێری گوزار و ئوتیلگیری </td>
+        <td  class="xshta16">69.000</td>
+        <td  class="xshta16">64.800</td>
+        </tr>
+        <tr class="xshta16">
+        <td class="xshta16">  ئابووری</td>
+        <td  class="xshta16">79.800</td>
+        <td  class="xshta16">74.000</td>
+        </tr>
+        <tr class="xshta16">
+        <td class="xshta16"> کارگێری کار </td>
+        <td  class="xshta16">77.116</td>
+        <td  class="xshta16">67.800</td>
+        </tr>
+        <tr class="xshta17">
+        <td rowspan="2">کۆلیژا پەروەردا بنەڕەتی  (ئامێدی) </td>
+        <td class="xshta17"> کۆمەلایەتی </td>
+        <td  class="xshta17">72.300</td>
+        <td  class="xshta17">66.600</td>
+        </tr>
+        <tr class="xshta17">
+        <td class="xshta17"> زمانێ ئینگلیزی </td>
+        <td  class="xshta17">78.600</td>
+        <td  class="xshta17">73.500</td>
+        </tr>
+        <tr class="xshta9">
+        <td> کۆلیژا پەروەردا لەشی و وەرزشی </td>
+        <td class="xshta"> پەروەردا لەشی و زانستێن وەرزشی </td>
+        <td  class="xshta">راستەوخۆ  60.000</td>
+        <td  class="xshta">راستەوخۆ  55.000</td>
+        </tr>
+        <tr class="xshta15">
+        <td rowspan="9"> کۆلیژا زانستێن ئەندازیاریا کشتوکاڵی </td>
+        <td class="xshta"> بەرهەمێن گیلگەیی (زەڤیان)</td>
+        <td  class="xshta">66.958</td>
+        <td  class="xshta">64.400</td>
+        </tr>
+        <tr class="xshta15">
+        <td class="xshta"> بیستانکاری </td>
+        <td  class="xshta">66.100</td>
+        <td  class="xshta">61.200</td>
+        </tr>
+        <tr class="xshta15">
+        <td class="xshta"> بەرهەمێ گیانەوەران </td>
+        <td  class="xshta">67.000</td>
+        <td  class="xshta">60.741</td>
+        </tr>
+        <tr class="xshta15">
+        <td class="xshta">  ئاخ و ئاڤ </td>
+        <td  class="xshta">66.100</td>
+        <td  class="xshta">60.264</td>
+        </tr>
+        <tr class="xshta15">
+        <td class="xshta">  دارستان </td>
+        <td  class="xshta">63.214</td>
+        <td  class="xshta">58.600</td>
+        </tr>
+        <tr class="xshta15">
+        <td class="xshta">  شیرەتکاریا چاندنێ و چڤاکێ گوندایەتی </td>
+        <td  class="xshta">62.300</td>
+        <td  class="xshta">58.157</td>
+        </tr>
+        <tr class="xshta15">
+        <td class="xshta"> پاراستنا ڕووەک  </td>
+        <td  class="xshta">65.000</td>
+        <td  class="xshta">62.100</td>
+        </tr>
+        <tr class="xshta15">
+        <td class="xshta"> گەشتیاریا  توریزما ژینگەهـێ</td>
+        <td  class="xshta">62.942</td>
+        <td  class="xshta">57.894</td>
+    </tr>
+</td>
+</table>
+<br>
+<div class="to">
+<p> کێمترین کۆنمرەیێ وەرگرتی ل زانکۆیا پۆلیتەکنیکا دهۆک ل ساڵا (2021-2022)<br><br>👇👇👇</p>
+</div>
+<table border="1" width="300" height="300" class="xshta2">
+    
+    <tr  class="xshta20">
+        <th colspan="5" class="xshta20"> کێمترین کۆنمرەیێ وەرگرتی ل زانکۆیا پۆلیتەکنیکا دهۆکێ   (2021-2022)</th>
+    </tr>
+        <tr>
+        <th class="xshta1"> کۆلیژ/پەیمانگەهـ </th>
+        <th class="xshta1"> پشک </th>
+        <th class="xshta1"> زانکۆلاین </th>
+        <th class="xshta1"> پارالێل </th>
+        <th class="xshta1"> ئێڤاران </th>
+        </tr>
+        <tr class="xshta5"> 
+        <td rowspan="2"> کۆلیژا تەکنیکیا تەندروستی و پزیشکی شێخان </td> 
+        <td class="xshta"> پەرستاری </td>
+        <td  class="xshta">95.333</td>
+        <td  class="xshta">995.528</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta5">
+        <td  class="xshta"> تەندروستیا گشتی </td>
+        <td  class="xshta">93.000</td>
+        <td  class="xshta">95.000</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta13">
+        <td rowspan="3">کۆلیژا تەکنیکی ئەندازیاریا دهۆک</td>
+        <td  class="xshta"> ئەندازیاریا کیمیاوی </td>
+        <td  class="xshta">91.880</td>
+        <td  class="xshta">87.960</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta13">
+        <td  class="xshta"> وزە </td>
+        <td  class="xshta">88.300</td>
+        <td  class="xshta">83.400</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta13">
+        <td  class="xshta"> رێگا وبان </td>
+        <td  class="xshta">90.800</td>
+        <td  class="xshta">87.720</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta16">
+        <td>کۆلیژا تەکنیکی پترۆل و کانزایان زاخۆ</td>
+        <td  class="xshta">  جیولۆجیا پترۆلێ </td>
+        <td  class="xshta">86.100</td>
+        <td  class="xshta">80.600</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta12">
+        <td rowspan="2">کۆلیژا تەکنیکیا ئاکرێ </td>
+        <td  class="xshta"> کارگێری کار </td>
+        <td  class="xshta">73.400</td>
+        <td  class="xshta">68.300</td>
+        <td  class="xshta">64.500</td>
+        </tr>
+        <tr class="xshta12">
+        <td  class="xshta"> ڕەزگەری </td>
+        <td  class="xshta">64.900</td>
+        <td  class="xshta">61.100</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta17">
+        <td rowspan="2">کۆلیژا تەکنیکیا ئینفورماتیک ئاکرێ</td>
+        <td  class="xshta"> تەکنەلۆجیا زانیاریانIT</td>
+        <td  class="xshta">82.100</td>
+        <td  class="xshta">75.600</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta17">
+        <td  class="xshta"> تۆرا کومپیوتەری پاراستنا زانیاریان </td>
+        <td  class="xshta">76.367</td>
+        <td  class="xshta">71.333</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta6">
+        <td rowspan="3">کۆلیژا تەکنیکیا  کارگێری دهۆک</td>
+        <td  class="xshta"> تەکنەلۆجیا زانیاریێن کارگێری</td>
+        <td  class="xshta">72.500</td>
+        <td  class="xshta">67.503</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta6">
+        <td  class="xshta"> تەکنیکیا کارگێری کار </td>
+        <td  class="xshta">71.300</td>
+        <td  class="xshta">66.500</td>
+        <td  class="xshta">65.600</td>
+        </tr>
+        <tr class="xshta6">
+        <td  class="xshta"> تەکنەلۆجیای ژمێریاری </td>
+        <td  class="xshta">68.120</td>
+        <td  class="xshta">64.411</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta14">
+        <td rowspan="4" > پەیمانگەهـا تەکنیکیا ئاکرێ </td>
+        <td class="xshta"> تەکنەلۆجیا زانیاریانIT </td>
+        <td  class="xshta">70.900</td>
+        <td  class="xshta">68.287</td>
+        <td  class="xshta">61.000</td>
+        </tr>
+        <tr class="xshta14"> 
+        <td class="xshta">رویپیڤان</td>
+        <td  class="xshta">70.400</td>
+        <td  class="xshta">63.400</td>
+        <td  class="xshta">60.595</td>
+        </tr>
+        <tr class="xshta14">
+        <td class="xshta">کارگێری یاسا</td>
+        <td  class="xshta">77.200</td>
+        <td  class="xshta">66.300</td>
+        <td  class="xshta">63.241</td>
+        </tr>
+        <tr class="xshta14">
+        <td class="xshta">پەرستاری/نەخوشەڤانی</td>
+        <td  class="xshta">89.143</td>
+        <td  class="xshta">78.857</td>
+        <td  class="xshta">77.143</td>
+        </tr>
+        <tr class="xshta8">
+        <td rowspan="6"> پەیمانگەهـا تەکنیکیا زاخۆ </td>
+        <td class="xshta"> تەکنەلۆجیا تاقیگەها نوژداری </td>
+        <td  class="xshta">89.000</td>
+        <td  class="xshta">78.400</td>
+        <td  class="xshta">80.100</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> تەکنەلۆجیا زانیاریانIT </td>
+        <td  class="xshta">75.666</td>
+        <td  class="xshta">64.700</td>
+        <td  class="xshta">61.944</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> کارگێری کار </td>
+        <td  class="xshta">72.799</td>
+        <td  class="xshta">65.500</td>
+        <td  class="xshta">62.800</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> پترۆل </td>
+        <td  class="xshta">80.300</td>
+        <td  class="xshta">70.500</td>
+        <td  class="xshta">66.800</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> پەرستاری/نەخوشەڤانی </td>
+        <td  class="xshta">87.143</td>
+        <td  class="xshta">80.548</td>
+        <td  class="xshta">76.857</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> چاندنا پاراستی </td>
+        <td  class="xshta">66.681</td>
+        <td  class="xshta">66.500</td>
+        <td  class="xshta">60.469</td>
+        </tr>
+        <tr class="xshta7" >
+        <td rowspan="2"> پەیمانگەهـا تەکنیکیا شنگالێ </td>
+        <td class="xshta"> ژمێریاری </td>
+        <td  class="xshta">66.023</td>
+        <td  class="xshta">59.502</td>
+        <td  class="xshta">56.500</td>
+        </tr>
+        <tr  class="xshta7">
+        <td class="xshta"> کارگێریا تەندروستی </td>
+        <td  class="xshta">82.800</td>
+        <td  class="xshta">74.334</td>
+        <td  class="xshta">72.750</td>
+        </tr>
+        <tr class="xshta3">
+        <td rowspan="5"> پەیمانگەهـا تەکنیکیا ئامێدی </td>
+        <td class="xshta"> تەکنەلۆجیا زانیاریانIT</td>
+        <td  class="xshta">70.601</td>
+        <td  class="xshta">61.704</td>
+        <td  class="xshta">58.935</td>
+        </tr>
+        <tr class="xshta3">
+        <td class="xshta"> تەکنەلۆجیا تاقیگەها نوژداری </td>
+        <td  class="xshta">86.688</td>
+        <td  class="xshta">75.400</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta3">
+        <td class="xshta"> کارگێری گەشتیاری </td>
+        <td  class="xshta">66.400</td>
+        <td  class="xshta">61.345</td>
+        <td  class="xshta">59.000</td>
+        </tr>
+        <tr class="xshta3">
+        <td class="xshta"> کارگێری بازارگەری </td>
+        <td  class="xshta">68.100</td>
+        <td  class="xshta">61.352</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta3">
+        <td class="xshta"> کارگێری کار </td>
+        <td  class="xshta">68.500</td>
+        <td  class="xshta">63.300</td>
+        <td  class="xshta">60.200</td>
+        </tr>
+        <tr class="xshta5">
+        <td rowspan="5"> پەیمانگەهـا تەکنیکیا بەردەرەش </td>
+        <td class="xshta"> تەکنەلۆجیا زانیاریانIT</td>
+        <td  class="xshta">77.900</td>
+        <td  class="xshta">61.081</td>
+        <td  class="xshta">68.244</td>
+        </tr>
+        <tr class="xshta5">
+        <td class="xshta"> تۆرێن کومپیوتەری </td>
+        <td  class="xshta">75.901</td>
+        <td  class="xshta">61.500</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta5">
+        <td class="xshta"> کارگێری کار </td>
+        <td  class="xshta">71.600</td>
+        <td  class="xshta">63.300</td>
+        <td  class="xshta">61.000</td>
+        </tr>
+        <tr class="xshta5">
+        <td class="xshta"> پەرستاری/نەخوشەڤانی</td>
+        <td  class="xshta">87.143</td>
+        <td  class="xshta">77.429</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta5">
+        <td class="xshta"> ژمێریاری </td>
+        <td  class="xshta">65.700</td>
+        <td  class="xshta">59.441</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta9">
+        <td rowspan="5" > پەیمانگەهـا تەکنیکیا دهۆک </td>
+        <td class="xshta"> پیشەسازیا تەکنەلۆجیا  </td>
+        <td  class="xshta">72.629</td>
+        <td  class="xshta">63.100</td>
+        <td  class="xshta">61.046</td>
+        </tr>
+        <tr class="xshta9">
+        <td class="xshta"> تەکنولۆجیا بیناکاری</td>
+        <td  class="xshta">72.441</td>
+        <td  class="xshta">64.400</td>
+        <td  class="xshta">63.100</td>
+        </tr>
+        <tr class="xshta9">
+        <td class="xshta"> دەرمانسازی </td>
+        <td  class="xshta">93.239</td>
+        <td  class="xshta">90.000</td>
+        <td  class="xshta">90.286</td>
+        </tr>
+        <tr class="xshta9">
+        <td class="xshta"> رویپیڤان </td>
+        <td  class="xshta">77.500</td>
+        <td  class="xshta">71.900</td>
+        <td  class="xshta">68.213</td>
+        </tr>
+        <tr class="xshta9">
+        <td class="xshta"> پەرستاری/نەخوشەڤانی </td>
+        <td  class="xshta">88.041</td>
+        <td  class="xshta">81.478</td>
+        <td  class="xshta">81.429</td>
+        </tr>
+         <tr class="xshta13">
+        <td rowspan="2" > پەیمانگەهـا تەکنیکیا شێخان </td>
+        <td class="xshta"> تەکنولۆجیا زانیاریانIT </td>
+        <td  class="xshta">69.900</td>
+        <td  class="xshta">60.790</td>
+        <td  class="xshta">59.404</td>
+        </tr>
+        <tr class="xshta13">
+        <td class="xshta"> کارگێری کار</td>
+        <td  class="xshta">68.700</td>
+        <td  class="xshta">63.700</td>
+        <td  class="xshta">60.930</td>
+        </tr>
+        <tr class="xshta15">
+        <td rowspan="3" > پەیمانگەهـا تەکنیکیا کارگێری دهۆک </td>
+        <td class="xshta"> سیستەمێ زانیاریێن کارگێری </td>
+        <td  class="xshta">68.700</td>
+        <td  class="xshta">60.000</td>
+        <td  class="xshta">59.300</td>
+        </tr>
+        <tr class="xshta15">
+        <td class="xshta"> کارگێری کار </td>
+        <td  class="xshta">70.600</td>
+        <td  class="xshta">65.800</td>
+        <td  class="xshta">62.800</td>
+        </tr>
+        <tr class="xshta15">
+        <td class="xshta"> ژمێریاری </td>
+        <td  class="xshta">72.900</td>
+        <td  class="xshta">61.957</td>
+        <td  class="xshta">59.826</td>
+        </tr>
+    </tr>
+</table>
+<hr><hr>
+<br><br><br>
+<div class="to">
+<p> کێمترین کۆنمرەیێ وەرگرتی ل زانکۆیا  زاخۆ ل ساڵا (2020-2021)<br><br>👇👇👇</p>
+</div>
+<table border="1" width="300" height="300" class="xshta2">
+    
+
+    <tr  class="xshta20">
+        <th colspan="5" class="xshta20"> کێمترین کۆنمرەیێ وەرگرتی ل زانکۆیا زاخۆ   (2020-2021)</th>
+    </tr>
+    <tr class="xshta1">
+        <th class="xshta1"> کۆلیژ/فاکەلتی </th>
+        <th class="xshta1"> پشک </th>
+        <th class="xshta1"> زانکۆلاین </th>
+        <th class="xshta1"> پارالێل </th>
+        <th class="xshta1"> ئێڤاران </th>
+        </tr>
+        <tr class="xshta4"> 
+        <td > کۆلیژا پزیشکی </td> 
+        <td class="xshta"> پزیشکی </td>
+        <td  class="xshta">97.714</td>
+        <td  class="xshta">96.857</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta3">
+        <td rowspan="3"  >کۆلیژا ئەندازیاری</td>
+        <td  class="xshta">ئەندازیاری شارستانی و ژینگەهـ</td>
+        <td  class="xshta">91.633</td>
+        <td  class="xshta">89.833</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta3">
+        <td  class="xshta">ئەندازیاری میکانیک</td>
+        <td  class="xshta">84.333</td>
+        <td  class="xshta">80.000</td>>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta3">
+        <td  class="xshta">ئەندازیاری پترۆل (نەڤت)</td>
+        <td  class="xshta">92.400</td>
+        <td  class="xshta">89.920</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta5">
+        <td rowspan="5" > فاکەڵتیا زانست </td>
+        <td class="xshta"> زانستێ کومپیوتەر </td>
+        <td  class="xshta">80.769</td>
+        <td  class="xshta">74.867</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta5"> 
+        <td class="xshta">زیندەوەرزانی</td>
+        <td  class="xshta">87.904</td>
+        <td  class="xshta">83.240</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta5">
+        <td class="xshta">فیزیا</td>
+        <td  class="xshta">78.240</td>
+        <td  class="xshta">72.167</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta5">
+        <td class="xshta">ماتماتیک</td>
+        <td  class="xshta">74.300</td>
+        <td  class="xshta">68.100</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta5">
+        <td class="xshta">کیمیا</td>
+        <td  class="xshta">85.767</td>
+        <td  class="xshta">80.700</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta16">
+        <td rowspan="5"  >فاکەڵتیا زانستێن مرۆڤایەتی</td>
+        <td class="xshta">خواندنا ئسلامی</td>
+        <td  class="xshta">راستەوخۆ</td>
+        <td  class="xshta">راستەوخۆ</td>
+        <td  class="xshta">راستەوخۆ</td>
+        </tr>
+        <tr class="xshta16">
+        <td class="xshta"> زمانێ ئینگلیزی </td>
+        <td  class="xshta">81.000</td>
+        <td  class="xshta">75.000</td>
+        <td  class="xshta">68.997</td>
+        </tr>
+        <tr class="xshta16">
+        <td class="xshta">زمانێ عەرەبی</td>
+        <td  class="xshta">73.900</td>
+        <td  class="xshta">67.662</td>
+        <td  class="xshta">63.500</td>
+        </tr>
+        <tr class="xshta16">
+        <td class="xshta"> زمانێ کوردی</td>
+        <td  class="xshta">69.800</td>
+        <td  class="xshta">65.300</td>
+        <td  class="xshta">62.563</td>
+        </tr>
+        <tr class="xshta16">
+        <td class="xshta"> مێژوو</td>
+        <td  class="xshta">73.700</td>
+        <td  class="xshta">68.500</td>
+        <td  class="xshta">65.100</td>
+        </tr>
+        <tr class="xshta7" >
+        <td rowspan="4">فاکەڵتیا پەروەردە</td>
+        <td class="xshta"> پەروەردا لەشی و زانستێن وەرزشی</td>
+        <td  class="xshta">راستەوخۆ</td>
+        <td  class="xshta">راستەوخۆ</td>
+        <td  class="xshta">راستەوخۆ</td>
+        </tr>
+        <tr  class="xshta7">
+        <td class="xshta"> جوگرافیا </td>
+        <td  class="xshta">74.200</td>
+        <td  class="xshta">68.000</td>
+        <td  class="xshta">65.218</td>
+        </tr>
+        <tr class="xshta7">
+        <td class="xshta"> دەرونناسی </td>
+        <td  class="xshta">69.600</td>
+        <td  class="xshta">65.800</td>
+        <td  class="xshta">63.200</td>
+        </tr>
+        <tr class="xshta7">
+        <td class="xshta"> ماتماتیک </td>
+        <td  class="xshta">70.100</td>
+        <td  class="xshta">64.234</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta8">
+        <td rowspan="5"> کۆلیژا پەروەردا بنیات </td>
+        <td class="xshta"> زانستێ گشتی </td>
+        <td  class="xshta">71.920</td>
+        <td  class="xshta">65.560</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> زانستێ کۆمەلایەتی</td>
+        <td  class="xshta">71.700</td>
+        <td  class="xshta">65.800</td>
+        <td  class="xshta">63.100</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> زمانێ ئینگلیزی </td>
+        <td  class="xshta">77.800</td>
+        <td  class="xshta">72.300</td>
+        <td  class="xshta">67.300</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta">زمانێ عەرەبی</td>
+        <td  class="xshta">72.496</td>
+        <td  class="xshta">66.500</td>
+        <td  class="xshta">63.200</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> زمانێ کوردی</td>
+        <td  class="xshta">69.436</td>
+        <td  class="xshta">64.500</td>
+        <td  class="xshta">62.000</td>
+        </tr>
+        <tr class="xshta9">
+        <td rowspan="5" > کۆلیژا کارگێری و ئابوری </td>
+        <td class="xshta"> زانستێ کارگێری </td>
+        <td  class="xshta">71.300</td>
+        <td  class="xshta">65.525</td>
+        <td  class="xshta">63.400</td>
+        </tr>
+        <tr class="xshta9">
+        <td class="xshta"> زانستێ ئابوری</td>
+        <td  class="xshta">72.800</td>
+        <td  class="xshta">66.500</td>
+        <td  class="xshta">63.981</td>
+        </tr>
+        <tr class="xshta9">
+        <td class="xshta"> زانستێ دارایی و بانکی </td>
+        <td  class="xshta">65.360</td>
+        <td  class="xshta">61.612</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+</tr>
+</table>
+<br><br>
+<div class="to">
+<p> کێمترین کۆنمرەیێ وەرگرتی ل زانکۆیا  دهۆک ل ساڵا (2020-2021)<br><br>👇👇👇</p>
+</div>
+<table border="1" width="300" height="300" class="xshta2">
+    
+
+    <tr  class="xshta20">
+        <th colspan="5" class="xshta20"> کێمترین کۆنمرەیێ وەرگرتی ل زانکۆیا دهۆک   (2020-2021)</th>
+    </tr>
+    <tr>
+        <th class="xshta1"> کۆلیژ </th>
+        <th class="xshta1"> پشک </th>
+        <th class="xshta1"> زانکۆلاین </th>
+        <th class="xshta1">    پارالێل    </th>
+       </tr>
+        <tr class="xshta4"> 
+        <td >  پزیشکی </td> 
+        <td class="xshta"> پزیشکی </td>
+        <td  class="xshta">98.012</td>
+        <td  class="xshta">97.000</td>
+        </tr>
+        <tr class="xshta5"> 
+        <td > دەرمانسازی </td> 
+        <td class="xshta"> دەرمانسازی </td>
+        <td  class="xshta">96.299</td>
+        <td  class="xshta">95.750</td>
+        </tr>
+        <tr class="xshta6"> 
+        <td > پزیشکیا ددانا </td> 
+        <td class="xshta"> پزیشکیا ددانا </td>
+        <td  class="xshta">96.800</td>
+        <td  class="xshta">96.333</td>
+        </tr>
+        <tr class="xshta15"> 
+        <td > پەرستاری </td> 
+        <td class="xshta"> پەرستاری </td>
+        <td  class="xshta">کچ 94.000<br>کۆر 95.143 </td>
+        <td  class="xshta">کچ 90.452<br>کۆر92.400</td>
+        </tr>
+        <tr class="xshta8"> 
+        <td > پزیشکیا ڤێتێرنەری </td> 
+        <td class="xshta"> پزیشکیا ڤێتێرنەری </td>
+        <td  class="xshta">82.924</td>
+        <td  class="xshta">77.333</td>
+        </tr>
+        <tr class="xshta4"> 
+        <td rowspan="2"> کۆلیژا زانستێن تەندروستی  </td> 
+        <td class="xshta"> زانستێ سرکرن (پەنچ) </td>
+        <td  class="xshta">94.667</td>
+        <td  class="xshta">94.051</td>
+        </tr>
+        <tr class="xshta4"> 
+        <td class="xshta"> زانستێ لابور پزیشکی </td>
+        <td  class="xshta">95.000</td>
+        <td  class="xshta">93.714</td>
+        </tr>
+        <tr class="xshta3">
+        <td rowspan="5"  >کۆلیژا ئەندازیاری</td>
+        <td  class="xshta"> شارستانی </td>
+        <td  class="xshta">94.480</td>
+        <td  class="xshta">91.633</td>
+        </tr>
+        <tr class="xshta3">
+        <td  class="xshta"> میکانیک</td>
+        <td  class="xshta">88.200</td>
+        <td  class="xshta">83.200</td>>
+        </tr>
+        <tr class="xshta3">
+        <td  class="xshta"> کارەبا و کومپیوتەر </td>
+        <td  class="xshta">91.380</td>
+        <td  class="xshta">87.933</td>
+        </tr>
+        <tr class="xshta3">
+        <td  class="xshta">  تەلارسازی </td>
+        <td  class="xshta">95.533</td>
+        <td  class="xshta">95.100</td>
+        </tr>
+        <tr class="xshta3">
+        <td  class="xshta"> بایۆمیدیکال (بڕا ساڵانە4,000$) ئەڤ بەشە دوو باوەرنامە پێ دهێنە دان ژلایێ زانکۆیا دهۆک و زانکۆیا ئەلمانی </td>
+        <td  class="xshta">78.841</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta5">
+        <td rowspan="6" > کۆلیژا زانست </td>
+        <td class="xshta"> زانستێ کومپیوتەر </td>
+        <td  class="xshta">82.167</td>
+        <td  class="xshta">77.300</td>
+        </tr>
+        <tr class="xshta5"> 
+        <td class="xshta">زیندەوەرزانی</td>
+        <td  class="xshta">89.133</td>
+        <td  class="xshta">84.880</td>
+        </tr>
+        <tr class="xshta5">
+        <td class="xshta">عەردناسی</td>
+        <td  class="xshta">73.000</td>
+        <td  class="xshta">69.102</td>
+        </tr>
+        <tr class="xshta5">
+        <td class="xshta">فیزیا</td>
+        <td  class="xshta">80.300</td>
+        <td  class="xshta">74.400</td>
+        </tr>
+        <tr class="xshta5">
+        <td class="xshta">ماتماتیک</td>
+        <td  class="xshta">76.395</td>
+        <td  class="xshta">71.300</td>
+        </tr>
+        <tr class="xshta5">
+        <td class="xshta">کیمیا</td>
+        <td  class="xshta">87.000</td>
+        <td  class="xshta">82.033</td>
+        </tr>
+        <tr class="xshta12">
+        <td> کۆلیژا یاسا </td>
+        <td class="xshta"> یاسا </td>
+        <td  class="xshta">87.400</td>
+        <td  class="xshta">82.800</td>
+        </tr>
+        <tr class="xshta13">
+        <td rowspan="2" > کۆلیژا زانستێن سیاسی </td>
+        <td class="xshta13"> سیستەمێ سیاسی و سیاسەتا گشتی </td>
+        <td  class="xshta13">77.400</td>
+        <td  class="xshta13">71.095</td>
+        </tr>
+        <tr class="xshta13">
+        <td class="xshta13"> پەیوەندیێن نیڤدەولەتی و دیبلوماسی </td>
+        <td  class="xshta13">79.900</td>
+        <td  class="xshta13">73.700</td>
+        </tr>
+        <tr class="xshta14">
+        <td rowspan="3" > کۆلیژا زمان </td>
+        <td class="xshta14"> زمانێ ئینگلیزی </td>
+        <td  class="xshta14">84.400</td>
+        <td  class="xshta14">78.100</td>
+        </tr>
+        <tr class="xshta14">
+        <td class="xshta14"> زمانێ کوردی </td>
+        <td  class="xshta14">69.944</td>
+        <td  class="xshta14">65.057</td>
+        </tr>
+        <tr class="xshta14">
+        <td class="xshta14"> وەرگێران </td>
+        <td  class="xshta14">83.944</td>
+        <td  class="xshta14">77.200</td>
+        </tr>
+        <tr class="xshta6">
+        <td rowspan="9"  >کۆلیژا زانستێن مرۆڤایەتی</td>
+        <td class="xshta"> دراما </td>
+        <td  class="xshta">راستەوخۆ</td>
+        <td  class="xshta">راستەوخۆ</td>
+        </tr>
+        <tr class="xshta6">
+        <td class="xshta">شێوار  </td>
+        <td  class="xshta">70.700</td>
+        <td  class="xshta">65.400</td>
+        </tr>
+        <tr class="xshta6">
+        <td class="xshta"> جوگرافیا </td>
+        <td  class="xshta">74.500</td>
+        <td  class="xshta">68.400</td>
+        </tr>
+        <tr class="xshta6">
+        <td class="xshta"> خواندنا ئاشتی و مافێن مرۆڤی  </td>
+        <td  class="xshta">68.836</td>
+        <td  class="xshta">64.600</td>
+        </tr>
+        <tr class="xshta6">
+        <td class="xshta"> دەرونناسی  </td>
+        <td  class="xshta">73.200</td>
+        <td  class="xshta">67.000</td>
+        </tr>
+        <tr class="xshta6">
+        <td class="xshta"> شێوەکاری </td>
+        <td  class="xshta">راستەوخۆ</td>
+        <td  class="xshta">راستەوخۆ</td>
+        </tr>
+        <tr class="xshta6">
+        <td class="xshta"> کۆمەلناسی </td>
+        <td  class="xshta">65.700</td>
+        <td  class="xshta">63.631</td>
+        </tr>
+        <tr class="xshta6">
+        <td class="xshta"> مێژوو </td>
+        <td  class="xshta">73.900</td>
+        <td  class="xshta">68.500</td>
+        </tr>
+        <tr class="xshta6">
+        <td class="xshta"> پەروەردا ئاینێ </td>
+        <td  class="xshta">راستەوخۆ</td>
+        <td  class="xshta">راستەوخۆ</td>
+        </tr>
+        <tr class="xshta5" >
+        <td> کۆلیژا پلان دانانا جهی</td>
+        <td class="xshta5">  پلان دانانا جهی (5 ساڵە ، بڕا ساڵانە3,000$) ئەڤ بەشە باوەرناما هەڤبەش پێ دهێتە دان ژلایێ زانکۆیا دهۆک و زانکۆیا ئەلمانی</td>
+        <td  class="xshta5">70.740</td>
+        <td  class="xshta5">- - - - -</td>
+        </tr>
+        <tr class="xshta12" >
+        <td rowspan="7">کۆلیژا پەروەردە - ئاکرێ</td>
+        <td class="xshta"> زمانێ ئینگلیزی </td>
+        <td  class="xshta">79.600</td>
+        <td  class="xshta">73.900</td>
+        </tr>
+        <tr  class="xshta12">
+        <td class="xshta"> زمانێ عەرەبی </td>
+        <td  class="xshta">74.100</td>
+        <td  class="xshta">67.800</td>
+        </tr>
+        <tr  class="xshta12">
+        <td class="xshta"> زمانێ کوردی </td>
+        <td  class="xshta">71.900</td>
+        <td  class="xshta">65.473</td>
+        </tr>
+        <tr  class="xshta12">
+        <td class="xshta"> زیندەوەرزانی </td>
+        <td  class="xshta">76.700</td>
+        <td  class="xshta">70.400</td>
+        </tr>
+        <tr  class="xshta12">
+        <td class="xshta"> ماتماتیک </td>
+        <td  class="xshta">69.700</td>
+        <td  class="xshta">63.500</td>
+        </tr>
+        <tr class="xshta12">
+        <td class="xshta"> مێژوو </td>
+        <td  class="xshta">74.600</td>
+        <td  class="xshta">68.700</td>
+        </tr>
+        <tr class="xshta12">
+        <td class="xshta"> پەروەردا ئاینی </td>
+        <td  class="xshta">راستەوخۆ</td>
+        <td  class="xshta">راستەوخۆ</td>
+        </tr>
+        <tr class="xshta8">
+        <td rowspan="9"> کۆلیژا پەروەردا بنەڕەتی </td>
+        <td class="xshta"> جوگرافیا </td>
+        <td  class="xshta">74.000</td>
+        <td  class="xshta">68.200</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> رابەریا پەروەردەیی </td>
+        <td  class="xshta">67.600</td>
+        <td  class="xshta">62.800</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> زانستەکان </td>
+        <td  class="xshta">73.320</td>
+        <td  class="xshta">66.920</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> زمانێ ئینگلیزی </td>
+        <td  class="xshta">79.000</td>
+        <td  class="xshta">73.700</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> زمانێ عەرەبی </td>
+        <td  class="xshta">74.500</td>
+        <td  class="xshta">68.100</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> زمانێ کوردی </td>
+        <td  class="xshta">70.600</td>
+        <td  class="xshta">64.800</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> ماتماتیک  </td>
+        <td  class="xshta">70.114</td>
+        <td  class="xshta">65.500</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> مێژوو </td>
+        <td  class="xshta">73.900</td>
+        <td  class="xshta">68.200</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> پەروەردا تایبەت </td>
+        <td  class="xshta">67.600</td>
+        <td  class="xshta">62.600</td>
+        </tr>
+        <tr class="xshta16">
+        <td rowspan="6" > کۆلیژا کارگێری و ئابوری </td>
+        <td class="xshta16"> زانستێ دارایی و بانکی </td>
+        <td  class="xshta16">65.800</td>
+        <td  class="xshta16">62.000</td>
+        </tr>
+        <tr class="xshta16">
+        <td class="xshta16"> ئامار </td>
+        <td  class="xshta16">64.117</td>
+        <td  class="xshta16">60.700</td>
+        </tr>
+        <tr class="xshta16">
+        <td class="xshta16"> ژمێریاری </td>
+        <td  class="xshta16">68.400</td>
+        <td  class="xshta16">64.000</td>
+        </tr>
+        <tr class="xshta16">
+        <td class="xshta16"> کارگێری گوزار و ئوتیلگیری </td>
+        <td  class="xshta16">67.000</td>
+        <td  class="xshta16">62.400</td>
+        </tr>
+        <tr class="xshta16">
+        <td class="xshta16">  ئابووری</td>
+        <td  class="xshta16">75.300</td>
+        <td  class="xshta16">68.900</td>
+        </tr>
+        <tr class="xshta16">
+        <td class="xshta16"> کارگێری کار </td>
+        <td  class="xshta16">72.700</td>
+        <td  class="xshta16">67.000</td>
+        </tr>
+        <tr class="xshta17">
+        <td rowspan="2">کۆلیژا پەروەردا بنەڕەتی  (ئامێدی) </td>
+        <td class="xshta17"> کۆمەلایەتی </td>
+        <td  class="xshta17">70.700</td>
+        <td  class="xshta17">64.720</td>
+        </tr>
+        <tr class="xshta17">
+        <td class="xshta17"> زمانێ ئینگلیزی </td>
+        <td  class="xshta17">75.100</td>
+        <td  class="xshta17">68.800</td>
+        </tr>
+        <tr class="xshta9">
+        <td> کۆلیژا پەروەردا لەشی و وەرزشی </td>
+        <td class="xshta"> پەروەردا لەشی و زانستێن وەرزشی </td>
+        <td  class="xshta">راستەوخۆ</td>
+        <td  class="xshta">راستەوخۆ</td>
+        </tr>
+        <tr class="xshta15">
+        <td rowspan="9"> کۆلیژا زانستێن ئەندازیاریا کشتوکاڵی </td>
+        <td class="xshta"> بەرهەمێن زەڤیان </td>
+        <td  class="xshta">63.922</td>
+        <td  class="xshta">60.678</td>
+        </tr>
+        <tr class="xshta15">
+        <td class="xshta"> بیستانکاری </td>
+        <td  class="xshta">62.634</td>
+        <td  class="xshta">58.700</td>
+        </tr>
+        <tr class="xshta15">
+        <td class="xshta"> بەرهەمێ گیانەوەران </td>
+        <td  class="xshta">63.433</td>
+        <td  class="xshta">58.430</td>
+        </tr>
+        <tr class="xshta15">
+        <td class="xshta">  ئاخ و ئاڤ </td>
+        <td  class="xshta">62.800</td>
+        <td  class="xshta">58.734</td>
+        </tr>
+        <tr class="xshta15">
+        <td class="xshta">  دارستان </td>
+        <td  class="xshta">61.496</td>
+        <td  class="xshta">57.700</td>
+        </tr>
+        <tr class="xshta15">
+        <td class="xshta">  شیرەتکاریا چاندنێ و چڤاکێ گوندایەتی </td>
+        <td  class="xshta">61.200</td>
+        <td  class="xshta">57.643</td>
+        </tr>
+        <tr class="xshta15">
+        <td class="xshta"> پاراستنا ڕووەک  </td>
+        <td  class="xshta">62.400</td>
+        <td  class="xshta">57.700</td>
+        </tr>
+        <tr class="xshta15">
+        <td class="xshta"> گەشتیاریا  توریزما ژینگەهـێ</td>
+        <td  class="xshta">60.869</td>
+        <td  class="xshta">57.697</td>
+    </tr>
+</td>
+</table>
+<br><br>
+<div class="to">
+<p> کێمترین کۆنمرەیێ وەرگرتی ل زانکۆیا  پۆلیتەکنیکا دهۆکێ ل ساڵا (2020-2021)<br><br>👇👇👇</p>
+</div>
+<table border="1" width="300" height="300" class="xshta2">
+    
+    <tr  class="xshta20">
+        <th colspan="5" class="xshta20"> کێمترین کۆنمرەیێ وەرگرتی ل زانکۆیا پۆلیتەکنیکا دهۆکێ   (2020-2021)</th>
+    </tr>
+        <tr>
+        <th class="xshta1"> کۆلیژ/پەیمانگەهـ </th>
+        <th class="xshta1"> پشک </th>
+        <th class="xshta1"> زانکۆلاین </th>
+        <th class="xshta1"> پارالێل </th>
+        <th class="xshta1"> ئێڤاران </th>
+        </tr>
+        <tr class="xshta5"> 
+        <td rowspan="2"> کۆلیژا تەکنیکیا تەندروستی و پزیشکی شێخان </td> 
+        <td class="xshta"> پەرستاری </td>
+        <td  class="xshta">93.143</td>
+        <td  class="xshta">90.286</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta5">
+        <td  class="xshta"> تەندروستیا گشتی </td>
+        <td  class="xshta">89.667</td>
+        <td  class="xshta">85.143</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta13">
+        <td rowspan="3">کۆلیژا تەکنیکی ئەندازیاریا دهۆک</td>
+        <td  class="xshta"> ئەندازیاریا کیمیاوی </td>
+        <td  class="xshta">89.645</td>
+        <td  class="xshta">84.740</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta13">
+        <td  class="xshta"> وزە </td>
+        <td  class="xshta">85.173</td>
+        <td  class="xshta">80.928</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta13">
+        <td  class="xshta"> رێگا وبان </td>
+        <td  class="xshta">88.698</td>
+        <td  class="xshta">83.717</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta16">
+        <td>کۆلیژا تەکنیکی پترۆل و کانزایان زاخۆ</td>
+        <td  class="xshta">  جیولۆجیا پترۆلێ </td>
+        <td  class="xshta">82.200</td>
+        <td  class="xshta">75.800</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta12">
+        <td rowspan="2">کۆلیژا تەکنیکیا ئاکرێ </td>
+        <td  class="xshta"> کارگێری کار </td>
+        <td  class="xshta">69.200</td>
+        <td  class="xshta">64.400</td>
+        <td  class="xshta">61.073</td>
+        </tr>
+        <tr class="xshta12">
+        <td  class="xshta"> ڕەزگەری </td>
+        <td  class="xshta">61.029</td>
+        <td  class="xshta">59.400</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta17">
+        <td rowspan="2">کۆلیژا تەکنیکیا ئینفورماتیک ئاکرێ</td>
+        <td  class="xshta"> تەکنەلۆجیا زانیاریانIT</td>
+        <td  class="xshta">71.400</td>
+        <td  class="xshta">66.200</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta17">
+        <td  class="xshta"> تۆرا کومپیوتەری پاراستنا زانیاریان </td>
+        <td  class="xshta">67.317</td>
+        <td  class="xshta">62.900</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta6">
+        <td rowspan="3">کۆلیژا تەکنیکیا  کارگێری دهۆک</td>
+        <td  class="xshta"> تەکنەلۆجیا زانیاریێن کارگێری</td>
+        <td  class="xshta">67.700</td>
+        <td  class="xshta">63.281</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta6">
+        <td  class="xshta"> تەکنیکیا کارگێری کار </td>
+        <td  class="xshta">69.646</td>
+        <td  class="xshta">64.996</td>
+        <td  class="xshta">62.000</td>
+        </tr>
+        <tr class="xshta6">
+        <td  class="xshta"> تەکنەلۆجیای ژمێریاری </td>
+        <td  class="xshta">64.400</td>
+        <td  class="xshta">61.797</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta14">
+        <td rowspan="4" > پەیمانگەهـا تەکنیکیا ئاکرێ </td>
+        <td class="xshta"> تەکنەلۆجیا زانیاریانIT </td>
+        <td  class="xshta">62.951</td>
+        <td  class="xshta">60.300</td>
+        <td  class="xshta">58.335</td>
+        </tr>
+        <tr class="xshta14"> 
+        <td class="xshta">رویپیڤان</td>
+        <td  class="xshta">63.300</td>
+        <td  class="xshta">60.888</td>
+        <td  class="xshta">58.433</td>
+        </tr>
+        <tr class="xshta14">
+        <td class="xshta">کارگێری یاسا</td>
+        <td  class="xshta">67.964</td>
+        <td  class="xshta">63.600</td>
+        <td  class="xshta">60.600</td>
+        </tr>
+        <tr class="xshta14">
+        <td class="xshta">پەرستاری/نەخوشەڤانی</td>
+        <td  class="xshta">80.571</td>
+        <td  class="xshta">77.143</td>
+        <td  class="xshta">73.350</td>
+        </tr>
+        <tr class="xshta8">
+        <td rowspan="6"> پەیمانگەهـا تەکنیکیا زاخۆ </td>
+        <td class="xshta"> تەکنەلۆجیا تاقیگەها نوژداری </td>
+        <td  class="xshta">80.600</td>
+        <td  class="xshta">75.945</td>
+        <td  class="xshta">72.100</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> تەکنەلۆجیا زانیاریانIT </td>
+        <td  class="xshta">65.700</td>
+        <td  class="xshta">61.600</td>
+        <td  class="xshta">60.100</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> کارگێری کار </td>
+        <td  class="xshta">67.500</td>
+        <td  class="xshta">63.390</td>
+        <td  class="xshta">60.800</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> پترۆل </td>
+        <td  class="xshta">72.200</td>
+        <td  class="xshta">67.300</td>
+        <td  class="xshta">62.867</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> پەرستاری/نەخوشەڤانی </td>
+        <td  class="xshta">82.096</td>
+        <td  class="xshta">77.773</td>
+        <td  class="xshta">73.429</td>
+        </tr>
+        <tr class="xshta8">
+        <td class="xshta"> چاندنا پاراستی </td>
+        <td  class="xshta">62.600</td>
+        <td  class="xshta">59.000</td>
+        <td  class="xshta">57.600</td>
+        </tr>
+        <tr class="xshta7" >
+        <td rowspan="2"> پەیمانگەهـا تەکنیکیا شنگالێ </td>
+        <td class="xshta"> ژمێریاری </td>
+        <td  class="xshta">60.700</td>
+        <td  class="xshta">58.394</td>
+        <td  class="xshta">56.467</td>
+        </tr>
+        <tr  class="xshta7">
+        <td class="xshta"> کارگێریا تەندروستی </td>
+        <td  class="xshta">72.529</td>
+        <td  class="xshta">70.700</td>
+        <td  class="xshta">68.800</td>
+        </tr>
+        <tr class="xshta3">
+        <td rowspan="5"> پەیمانگەهـا تەکنیکیا ئامێدی </td>
+        <td class="xshta"> تەکنەلۆجیا زانیاریانIT</td>
+        <td  class="xshta">61.940</td>
+        <td  class="xshta">59.939</td>
+        <td  class="xshta">57.785</td>
+        </tr>
+        <tr class="xshta3">
+        <td class="xshta"> تەکنەلۆجیا تاقیگەها نوژداری </td>
+        <td  class="xshta">77.910</td>
+        <td  class="xshta">73.800</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta3">
+        <td class="xshta"> کارگێری گەشتیاری </td>
+        <td  class="xshta">64.467</td>
+        <td  class="xshta">59.600</td>
+        <td  class="xshta">57.765</td>
+        </tr>
+        <tr class="xshta3">
+        <td class="xshta"> کارگێری بازارگەری </td>
+        <td  class="xshta">65.600</td>
+        <td  class="xshta">60.518</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta3">
+        <td class="xshta"> کارگێری کار </td>
+        <td  class="xshta">66.500</td>
+        <td  class="xshta">61.600</td>
+        <td  class="xshta">59.200</td>
+        </tr>
+        <tr class="xshta5">
+        <td rowspan="5"> پەیمانگەهـا تەکنیکیا بەردەرەش </td>
+        <td class="xshta"> تەکنەلۆجیا زانیاریانIT</td>
+        <td  class="xshta">62.200</td>
+        <td  class="xshta">59.500</td>
+        <td  class="xshta">57.046</td>
+        </tr>
+        <tr class="xshta5">
+        <td class="xshta"> تۆرێن کومپیوتەری </td>
+        <td  class="xshta">62.500</td>
+        <td  class="xshta">59.300</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta5">
+        <td class="xshta"> کارگێری کار </td>
+        <td  class="xshta">66.000</td>
+        <td  class="xshta">61.451</td>
+        <td  class="xshta">59.100</td>
+        </tr>
+        <tr class="xshta5">
+        <td class="xshta"> پەرستاری/نەخوشەڤانی</td>
+        <td  class="xshta">79.429</td>
+        <td  class="xshta">75.429</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta5">
+        <td class="xshta"> ژمێریاری </td>
+        <td  class="xshta">60.900</td>
+        <td  class="xshta">58.183</td>
+        <td  class="xshta">- - - - -</td>
+        </tr>
+        <tr class="xshta9">
+        <td rowspan="5" > پەیمانگەهـا تەکنیکیا دهۆک </td>
+        <td class="xshta"> پیشەسازیا تەکنەلۆجیا  </td>
+        <td  class="xshta">64.736</td>
+        <td  class="xshta">61.400</td>
+        <td  class="xshta">59.515</td>
+        </tr>
+        <tr class="xshta9">
+        <td class="xshta"> تەکنولۆجیا بیناکاری</td>
+        <td  class="xshta">65.200</td>
+        <td  class="xshta">61.600</td>
+        <td  class="xshta">59.500</td>
+        </tr>
+        <tr class="xshta9">
+        <td class="xshta"> دەرمانسازی </td>
+        <td  class="xshta">88.056</td>
+        <td  class="xshta">84.907</td>
+        <td  class="xshta">82.000</td>
+        </tr>
+        <tr class="xshta9">
+        <td class="xshta"> رویپیڤان </td>
+        <td  class="xshta">66.800</td>
+        <td  class="xshta">63.578</td>
+        <td  class="xshta">61.300</td>
+        </tr>
+        <tr class="xshta9">
+        <td class="xshta"> پەرستاری/نەخوشەڤانی </td>
+        <td  class="xshta">84.000</td>
+        <td  class="xshta">78.913</td>
+        <td  class="xshta">75.218</td>
+        </tr>
+         <tr class="xshta13">
+        <td rowspan="2" > پەیمانگەهـا تەکنیکیا شێخان </td>
+        <td class="xshta"> تەکنولۆجیا زانیاریانIT </td>
+        <td  class="xshta">61.966</td>
+        <td  class="xshta">59.006</td>
+        <td  class="xshta">57.200</td>
+        </tr>
+        <tr class="xshta13">
+        <td class="xshta"> کارگێری کار</td>
+        <td  class="xshta">66.100</td>
+        <td  class="xshta">62.600</td>
+        <td  class="xshta">59.500</td>
+        </tr>
+        <tr class="xshta15">
+        <td rowspan="3" > پەیمانگەهـا تەکنیکیا کارگێری دهۆک </td>
+        <td class="xshta"> سیستەمێ زانیاریێن کارگێری </td>
+        <td  class="xshta">61.818</td>
+        <td  class="xshta">59.600</td>
+        <td  class="xshta">57.700</td>
+        </tr>
+        <tr class="xshta15">
+        <td class="xshta"> کارگێری کار </td>
+        <td  class="xshta">67.700</td>
+        <td  class="xshta">63.900</td>
+        <td  class="xshta">61.100</td>
+        </tr>
+        <tr class="xshta15">
+        <td class="xshta"> ژمێریاری </td>
+        <td  class="xshta">62.700</td>
+        <td  class="xshta">60.251</td>
+        <td  class="xshta">58.483</td>
+        </tr>
+    </tr>
+</table>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
